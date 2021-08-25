@@ -31,5 +31,10 @@
             $this->smarty->display('Administrador/Creartrabajador.tpl');
 
         }
+        public function Vistrabajador()
+        {
+            $this->smarty->assign('title','Trabajador');
+            $this->smarty->display('Trabajador/trabajador.tpl');
+        }
     }   
 ?>

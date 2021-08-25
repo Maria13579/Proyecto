@@ -4,11 +4,13 @@
         public $admin;
         public $smarty;
         public $u;
+        public $direc;
         public function __construct()
         {
-            Session_start();
+            
             $this->admin = new Admin();
             $this->smarty = new Smarty();
+            $this->direc = new Direcciones();
          
         }
         public function Trabajador()
@@ -24,7 +26,7 @@
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
             $this->smarty->assign('title','Administrador');
-            $this->smarty->display('Administrador/Creartrabajador.tpl');
+            $this->direc->VistaCrearTrabajador();
         }
         
     }

@@ -38,11 +38,7 @@
                     else if ($_SESSION['rol']==2)
                     {
                         $_SESSION['rol'] = "Trabajador";
-                    }
-                    else if ($_SESSION['rol']==3)
-                    {
-                        $_SESSION['rol']= "Cliente";
-                    }
+                    }                  
                   $this->smarty->assign('nombre', $_SESSION['nombre']); 
                   $this->smarty->assign('apellido', $_SESSION['apellido']);
                   $this->smarty->assign('ro', $_SESSION['rol']);
@@ -64,26 +60,18 @@
                     {
                         $_SESSION['rol']= "Trabajador";
                     }
-                    else if ($_SESSION['rol']==3)
-                    {
-                        $_SESSION['rol']= "Cliente";
-                    }
                     $this->smarty->assign('nombre', $_SESSION['nombre']); 
                     $this->smarty->assign('apellido', $_SESSION['apellido']);
                     $this->smarty->assign('ro', $_SESSION['rol']); 
-                 
                     $this->smarty->assign('title','Cliente');
-                    $this->smarty->display('');
-                }  
-            
+                    $this->smarty->display('Trabajador/trabajador.tpl');
+                }              
             }
             else
             {      
                     $this->smarty->assign('msn','Usuario o Contaseña incorrecto'); 
                     $this->smarty->assign('title','Inicio Sesion');       
-                    $this->smarty->display('Trabajador/Iniciotrabajador.tpl'); 
-              
-                
+                    $this->smarty->display('Trabajador/Iniciotrabajador.tpl');                             
             }
         
         }

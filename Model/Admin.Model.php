@@ -14,7 +14,7 @@
         }
         public function Creartrabajador($rol,$no,$ap,$us,$pa)
         {
-            $consulta=$this->con->query("INSERT INTO `usuario`(`Rol_idRol`,`nombre`,`Apellido`,`Usuario`,`Pass`) VALUES ('$rol','$no','$ap','$us','$pa')");
+            $consulta=$this->con->query("INSERT INTO `usuario`(`Rol_id_Rol`,`nombre`,`Apellido`,`Usuario`,`Pass`) VALUES ('$rol','$no','$ap','$us','$pa')");
             $this->con->close();
             return $consulta;
         }
