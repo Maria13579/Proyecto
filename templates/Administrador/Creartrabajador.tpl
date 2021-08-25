@@ -1,7 +1,7 @@
 {include file="templates/Cabeceras/Header.tpl"}
 {include file="Navs/Encabezado.tpl"}  
 <h3 class="center-align"> Crear Trabajador</h3>
-<div class="col s6" class="center-align">
+<div class="col s8" class="center-align">
             <form method="post" action="?class=Administrador&method=Trabajador">
                 <div class="input-field col s6">
                     <input  type="text" name="nombre" placeholder="Nombre del Empleado">   
